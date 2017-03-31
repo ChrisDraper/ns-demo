@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Firebase Data
+    </ion-title>
+    <ion-buttons end>
+      
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Emotions</h3>
+  <p>Record your latest emotional level below.</p>
+
+ <ion-list>
+    <ion-list-header>
+      <ion-label>Fear</ion-label>
+      <ion-badge color="warning" item-right>{{fearValue}}</ion-badge>
+    </ion-list-header>
+  <ion-item>
+    <ion-range min="1" max="10" step="1" snaps="true" color="danger" pin="true" [(ngModel)]="fearValue">
+      <ion-label range-left>1</ion-label>
+      <ion-label range-right>10</ion-label>
+    </ion-range>
+  </ion-item>
+
+    <ion-list-header>
+      <ion-label>Sadness</ion-label>
+      <ion-badge color="warning" item-right>{{sadnessValue}}</ion-badge>
+    </ion-list-header>
+  <ion-item>
+    <ion-range min="1" max="10" step="1" snaps="true" color="danger" pin="true" [(ngModel)]="sadnessValue">
+      <ion-label range-left>1</ion-label>
+      <ion-label range-right>10</ion-label>
+    </ion-range>
+  </ion-item>
+
+    <ion-list-header>
+      <ion-label>Joy</ion-label>
+      <ion-badge color="warning" item-right>{{joyValue}}</ion-badge>
+    </ion-list-header>
+  <ion-item>
+    <ion-range min="1" max="10" step="1" snaps="true" color="danger" pin="true" [(ngModel)]="joyValue">
+      <ion-label range-left>1</ion-label>
+      <ion-label range-right>10</ion-label>
+    </ion-range>
+  </ion-item>
+
+
+
+
+  
+</ion-list>  
+  <div text-center padding-top>
+      <button ion-button color="primary" round (click)='saveEmotions()'>Submit</button>
+  </div>
+</ion-content>
